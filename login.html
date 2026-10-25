@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sign In - Workshop Management System administrative login portal for faculty, lab coordinators, and student organizers.">
+  <title>Sign In - Workshop Management System</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="auth-page">
+  <main class="auth-container animate-fade-in" aria-labelledby="login-heading">
+    <div class="auth-header">
+      <div class="auth-logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      </div>
+      <h1 id="login-heading" class="auth-title">WorkshopHub</h1>
+      <p class="auth-subtitle">Centralized Workshop Management &amp; Resource Portal</p>
+    </div>
+
+    <div class="auth-disclaimer-card">
+      <strong>Academic BTech CSE Project Prototype:</strong>
+      This frontend application demonstrates HTML5 Form Validation and CSS3 Box-Model styling without JavaScript or server-side authentication. Submit to enter the dashboard directly.
+    </div>
+
+    <form class="auth-form" action="index.html" method="get">
+      <div class="form-group">
+        <label for="login-email" class="label-required">Institutional Email Address</label>
+        <input type="email" id="login-email" name="email" value="admin@college.edu" placeholder="e.g. yourname@college.edu" required autocomplete="email">
+      </div>
+
+      <div class="form-group">
+        <label for="login-password" class="label-required">Password</label>
+        <input type="password" id="login-password" name="password" value="Password@123" placeholder="Enter secure password" required minlength="8" autocomplete="current-password">
+      </div>
+
+      <div class="auth-options">
+        <label class="checkbox-label">
+          <input type="checkbox" name="remember" checked>
+          <span>Remember credentials</span>
+        </label>
+        <a href="#forgot" title="Password recovery simulation">Forgot password?</a>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 8px;">
+        <span>Sign In to Dashboard</span>
+        <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+      </button>
+    </form>
+
+    <footer class="auth-footer">
+      <span>Don't have an administrative account?</span>
+      <a href="register.html" style="font-weight: 600; margin-left: 4px;">Register Participant Account &rarr;</a>
+    </footer>
+  </main>
+</body>
+</html>

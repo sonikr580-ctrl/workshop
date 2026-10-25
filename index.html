@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Workshop Management System - Centralized administrative portal for scheduling workshops, participant tracking, and inventory control.">
+  <title>Dashboard - Workshop Management System</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle-input" aria-hidden="true">
+
+  <div class="app-container">
+    <aside class="sidebar" aria-label="Main Navigation">
+      <div class="sidebar-brand">
+        <div class="brand-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <div class="brand-info">
+          <span class="brand-title">LPU WorkshopHub</span>
+          <span class="brand-badge">Admin Portal</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav"> 
+        <div class="nav-section-title">Overview</div>
+        <ul class="nav-list">
+          <li class="nav-item active">
+            <a href="index.html" aria-current="page">
+              <svg viewBox="0 0 24 24"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="workshops.html">
+              <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+              <span>Workshops</span>
+              <span class="nav-counter">24</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="participants.html">
+              <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 3s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+              <span>Participants</span>
+              <span class="nav-counter">486</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="registrations.html">
+              <svg viewBox="0 0 24 24"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+              <span>Registrations</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="nav-section-title">Resources</div>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="equipment.html">
+              <svg viewBox="0 0 24 24"><path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/></svg>
+              <span>Equipment</span>
+              <span class="nav-counter">128</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="rentals.html">
+              <svg viewBox="0 0 24 24"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14zm-1-6h-3V8h-2v5H8l4 4 4-4z"/></svg>
+              <span>Equipment Rentals</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="requests.html">
+              <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z"/></svg>
+              <span>Requests</span>
+              <span class="nav-counter">12</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="nav-section-title">System</div>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="reports.html">
+              <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+              <span>Reports</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="settings.html">
+              <svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+              <span>Settings</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-user">
+        <div class="user-card">
+          <div class="user-avatar" aria-hidden="true">AD</div>
+          <div class="user-details">
+            <span class="user-name">Dr. Rajesh Kumar</span>
+            <span class="user-role">System Administrator</span>
+          </div>
+          <a href="login.html" class="user-logout" title="Sign out" aria-label="Sign out">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"/></svg>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="main-wrapper">
+      <header class="top-nav">
+        <div class="top-nav-left">
+          <label for="sidebar-toggle" class="sidebar-toggle-label" aria-label="Toggle navigation menu">
+            <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+          </label>
+          <div class="page-title-box">
+            <h1 class="page-title">Executive Dashboard</h1>
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <span class="breadcrumb-item"><a href="index.html">Home</a></span>
+              <span class="breadcrumb-item active" aria-current="page">Dashboard</span>
+            </nav>
+          </div>
+        </div>
+
+        <div class="top-nav-right">
+          <form class="nav-search" action="workshops.html" method="get">
+            <svg class="search-icon" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            <input type="search" name="q" placeholder="Search workshops, equipment..." aria-label="Search content">
+          </form>
+
+          <div class="notification-menu" tabindex="0">
+            <button type="button" class="notification-btn" aria-label="Notifications (3 unread)">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg>
+              <span class="notification-badge" aria-hidden="true"></span>
+            </button>
+            <div class="notification-dropdown">
+              <div class="notification-header">
+                <span>Recent Notifications</span>
+                <span class="badge badge-info">3 New</span>
+              </div>
+              <a href="requests.html" class="notification-item">
+                <strong>New equipment request submitted</strong>
+                <span class="notification-time">10 minutes ago</span>
+              </a>
+              <a href="registrations.html" class="notification-item">
+                <strong>Participant registration limit reached</strong>
+                <span class="notification-time">45 minutes ago</span>
+              </a>
+              <a href="rentals.html" class="notification-item">
+                <strong>Rental overdue alert: Projector Kit B</strong>
+                <span class="notification-time">2 hours ago</span>
+              </a>
+            </div>
+          </div>
+
+          <a href="settings.html" class="top-user-pill">
+            <div class="top-user-avatar">RK</div>
+            <span class="top-user-name">Dr. Rajesh</span>
+            <span class="top-user-tag">Admin</span>
+          </a>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <section class="welcome-hero animate-fade-in" aria-labelledby="welcome-heading">
+          <div class="welcome-text">
+            <h1 id="welcome-heading">Welcome back, Admin</h1>
+            <p>Here's what's happening with your workshops and laboratory resources today.</p>
+          </div>
+          <div class="welcome-actions">
+            <a href="create-workshop.html" class="btn btn-primary btn-lg">
+              <svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+              <span>Create Workshop</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="stats-grid" aria-label="System Key Statistics">
+          <article class="stat-card">
+            <div class="stat-card-header">
+              <span class="stat-label">Total Workshops</span>
+              <div class="stat-icon primary" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+              </div>
+            </div>
+            <div class="stat-value">24</div>
+            <div class="stat-footer">
+              <span class="stat-trend positive">+3 this month</span>
+              <span>Across all categories</span>
+            </div>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-card-header">
+              <span class="stat-label">Registered Participants</span>
+              <div class="stat-icon success" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 3s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+              </div>
+            </div>
+            <div class="stat-value">486</div>
+            <div class="stat-footer">
+              <span class="stat-trend positive">+14% growth</span>
+              <span>Across all workshops</span>
+            </div>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-card-header">
+              <span class="stat-label">Equipment Items</span>
+              <div class="stat-icon accent" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4z"/></svg>
+              </div>
+            </div>
+            <div class="stat-value">128</div>
+            <div class="stat-footer">
+              <span class="stat-trend neutral">94% operational</span>
+              <span>Available inventory</span>
+            </div>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-card-header">
+              <span class="stat-label">Pending Requests</span>
+              <div class="stat-icon warning" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+              </div>
+            </div>
+            <div class="stat-value">12</div>
+            <div class="stat-footer">
+              <span class="stat-trend neutral">4 high priority</span>
+              <span>Awaiting approval</span>
+            </div>
+          </article>
+        </section>
+
+        <div class="dashboard-columns">
+          <section class="card" aria-labelledby="upcoming-workshops-title">
+            <div class="card-header">
+              <div>
+                <h2 id="upcoming-workshops-title" class="card-title">
+                  <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10z"/></svg>
+                  Upcoming Workshops
+                </h2>
+                <span class="card-subtitle">Active and scheduled sessions for this semester</span>
+              </div>
+              <a href="workshops.html" class="btn btn-secondary btn-sm">View All Workshops</a>
+            </div>
+
+            <div class="table-responsive">
+              <table class="table-striped">
+                <caption>List of workshops scheduled for delivery</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Workshop Name</th>
+                    <th scope="col">Instructor</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Time</th>
+                    <th scope="col">Participants</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="cell-with-avatar">
+                        <div class="table-avatar">PY</div>
+                        <div>
+                          <span class="table-main-text">Introduction to Python</span>
+                          <span class="table-sub-text">CS-W101 • Programming</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Dr. Sarah Jenkins</td>
+                    <td><time datetime="2026-11-05">Nov 05, 2026</time></td>
+                    <td>10:00 AM</td>
+                    <td><strong>60</strong> / 60</td>
+                    <td><span class="badge badge-upcoming">Upcoming</span></td>
+                    <td>
+                      <div class="btn-group">
+                        <a href="workshops.html" class="btn btn-secondary btn-sm">View</a>
+                        <a href="create-workshop.html" class="btn btn-secondary btn-sm">Edit</a>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="cell-with-avatar">
+                        <div class="table-avatar">WD</div>
+                        <div>
+                          <span class="table-main-text">Web Development Bootcamp</span>
+                          <span class="table-sub-text">CS-W102 • Full Stack</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Prof. Alan Vance</td>
+                    <td><time datetime="2026-11-08">Nov 08, 2026</time></td>
+                    <td>01:30 PM</td>
+                    <td><strong>45</strong> / 50</td>
+                    <td><span class="badge badge-ongoing">Ongoing</span></td>
+                    <td>
+                      <div class="btn-group">
+                        <a href="workshops.html" class="btn btn-secondary btn-sm">View</a>
+                        <a href="create-workshop.html" class="btn btn-secondary btn-sm">Edit</a>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="cell-with-avatar">
+                        <div class="table-avatar">AI</div>
+                        <div>
+                          <span class="table-main-text">Artificial Intelligence Fundamentals</span>
+                          <span class="table-sub-text">CS-W103 • Machine Learning</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Dr. Priya Sharma</td>
+                    <td><time datetime="2026-11-12">Nov 12, 2026</time></td>
+                    <td>09:00 AM</td>
+                    <td><strong>78</strong> / 80</td>
+                    <td><span class="badge badge-upcoming">Upcoming</span></td>
+                    <td>
+                      <div class="btn-group">
+                        <a href="workshops.html" class="btn btn-secondary btn-sm">View</a>
+                        <a href="create-workshop.html" class="btn btn-secondary btn-sm">Edit</a>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="cell-with-avatar">
+                        <div class="table-avatar">UX</div>
+                        <div>
+                          <span class="table-main-text">UI/UX Design Workshop</span>
+                          <span class="table-sub-text">CS-W104 • Human Computer Interaction</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Elena Rostova</td>
+                    <td><time datetime="2026-10-18">Oct 18, 2026</time></td>
+                    <td>11:00 AM</td>
+                    <td><strong>35</strong> / 35</td>
+                    <td><span class="badge badge-completed">Completed</span></td>
+                    <td>
+                      <div class="btn-group">
+                        <a href="workshops.html" class="btn btn-secondary btn-sm">View</a>
+                        <a href="create-workshop.html" class="btn btn-secondary btn-sm">Edit</a>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="cell-with-avatar">
+                        <div class="table-avatar">CS</div>
+                        <div>
+                          <span class="table-main-text">Cybersecurity Essentials</span>
+                          <span class="table-sub-text">CS-W105 • Information Security</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Michael Chang</td>
+                    <td><time datetime="2026-11-20">Nov 20, 2026</time></td>
+                    <td>02:00 PM</td>
+                    <td><strong>52</strong> / 60</td>
+                    <td><span class="badge badge-upcoming">Upcoming</span></td>
+                    <td>
+                      <div class="btn-group">
+                        <a href="workshops.html" class="btn btn-secondary btn-sm">View</a>
+                        <a href="create-workshop.html" class="btn btn-secondary btn-sm">Edit</a>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="cell-with-avatar">
+                        <div class="table-avatar">CL</div>
+                        <div>
+                          <span class="table-main-text">Cloud Computing &amp; DevOps</span>
+                          <span class="table-sub-text">CS-W106 • Infrastructure</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>David Miller</td>
+                    <td><time datetime="2026-10-25">Oct 25, 2026</time></td>
+                    <td>10:00 AM</td>
+                    <td><strong>0</strong> / 40</td>
+                    <td><span class="badge badge-cancelled">Cancelled</span></td>
+                    <td>
+                      <div class="btn-group">
+                        <a href="workshops.html" class="btn btn-secondary btn-sm">View</a>
+                        <a href="create-workshop.html" class="btn btn-secondary btn-sm">Edit</a>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <aside class="card" aria-labelledby="activity-heading">
+            <div class="card-header">
+              <h2 id="activity-heading" class="card-title">
+                <svg viewBox="0 0 24 24"><path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/></svg>
+                Recent Activity
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="activity-list">
+                <div class="activity-item">
+                  <div class="activity-icon-wrap reg" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm-9-2V7H4v3H1v2h3v3h2v-3h3v-2H6zm9 4c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                  </div>
+                  <div class="activity-content">
+                    <div class="activity-title">New participant registered</div>
+                    <div class="activity-meta">Aarav Patel enrolled in Web Development Bootcamp • 10m ago</div>
+                  </div>
+                </div>
+
+                <div class="activity-item">
+                  <div class="activity-icon-wrap update" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M21 10.12h-6.78l2.74-2.82c-2.73-2.7-7.15-2.8-9.88-.1-2.73 2.71-2.73 7.08 0 9.79s7.15 2.71 9.88 0C18.32 15.65 19 14.08 19 12.1h2c0 1.98-.88 4.34-2.35 5.82-3.89 3.92-10.24 3.92-14.13 0-3.9-3.92-3.9-10.27 0-14.18 3.89-3.92 10.24-3.92 14.13 0L21 1v9.12z"/></svg>
+                  </div>
+                  <div class="activity-content">
+                    <div class="activity-title">Workshop schedule updated</div>
+                    <div class="activity-meta">AI Fundamentals room reassigned to Lab 4B • 1h ago</div>
+                  </div>
+                </div>
+
+                <div class="activity-item">
+                  <div class="activity-icon-wrap rent" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4z"/></svg>
+                  </div>
+                  <div class="activity-content">
+                    <div class="activity-title">Equipment rental requested</div>
+                    <div class="activity-meta">Dr. Sarah Jenkins requested 15 IoT Dev Boards • 2h ago</div>
+                  </div>
+                </div>
+
+                <div class="activity-item">
+                  <div class="activity-icon-wrap check" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  </div>
+                  <div class="activity-content">
+                    <div class="activity-title">Workshop completed successfully</div>
+                    <div class="activity-meta">UI/UX Design session finished with 35 attendees • 5h ago</div>
+                  </div>
+                </div>
+
+                <div class="activity-item">
+                  <div class="activity-icon-wrap update" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+                  </div>
+                  <div class="activity-content">
+                    <div class="activity-title">New inventory item added</div>
+                    <div class="activity-meta">4K Laser Projector Kit logged under ID EQ-1044 • 1d ago</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="requests.html">View all activity logs &rarr;</a>
+            </div>
+          </aside>
+        </div>
+
+        <section class="card" aria-labelledby="quick-actions-title">
+          <div class="card-header">
+            <h2 id="quick-actions-title" class="card-title">
+              <svg viewBox="0 0 24 24"><path d="M13 2.05v3.03c3.39.49 6 3.39 6 6.92 0 .9-.18 1.75-.48 2.54l2.6 1.53c.56-1.24.88-2.62.88-4.07 0-5.18-3.95-9.45-9-9.95zM12 19c-3.87 0-7-3.13-7-7 0-3.53 2.61-6.43 6-6.92V2.05c-5.06.5-9 4.76-9 9.95 0 5.52 4.47 10 9.99 10 3.31 0 6.24-1.61 8.01-4.09l-2.46-1.44C16.15 17.84 14.23 19 12 19z"/></svg>
+              Administrative Quick Actions
+            </h2>
+            <span class="card-subtitle">One-click shortcuts to key management tasks</span>
+          </div>
+          <div class="card-body">
+            <div class="quick-actions-grid">
+              <a href="create-workshop.html" class="quick-action-card">
+                <div class="quick-action-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+                </div>
+                <div class="quick-action-title">Create Workshop</div>
+                <div class="quick-action-desc">Define a new technical workshop syllabus, schedule, and instructors.</div>
+              </a>
+
+              <a href="register-participant.html" class="quick-action-card">
+                <div class="quick-action-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm-9-2V7H4v3H1v2h3v3h2v-3h3v-2H6zm9 4c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                </div>
+                <div class="quick-action-title">Register Participant</div>
+                <div class="quick-action-desc">Enroll students, staff, or guests into scheduled workshop batches.</div>
+              </a>
+
+              <a href="add-equipment.html" class="quick-action-card">
+                <div class="quick-action-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/></svg>
+                </div>
+                <div class="quick-action-title">Add Equipment</div>
+                <div class="quick-action-desc">Catalog new lab equipment, laptops, microcontrollers, and AV kits.</div>
+              </a>
+
+              <a href="reports.html" class="quick-action-card">
+                <div class="quick-action-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+                </div>
+                <div class="quick-action-title">View Reports</div>
+                <div class="quick-action-desc">Analyze attendance statistics, utilization rates, and KPI summaries.</div>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="app-footer">
+        <div>
+          <span>&copy; 2026 Workshop Management System. Department of Computer Science &amp; Engineering.</span>
+        </div>
+        <div class="footer-links">
+          <a href="reports.html">Analytics</a>
+          <a href="settings.html">Settings</a>
+          <a href="login.html">Sign Out</a>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

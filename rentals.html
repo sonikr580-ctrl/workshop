@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Equipment Rentals - Review hardware requisition requests, approve faculty checkouts, and record inventory returns.">
+  <title>Equipment Rentals - Workshop Management System</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle-input" aria-hidden="true">
+
+  <div class="app-container">
+    <aside class="sidebar" aria-label="Main Navigation">
+      <div class="sidebar-brand">
+        <div class="brand-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <div class="brand-info">
+          <span class="brand-title">WorkshopHub</span>
+          <span class="brand-badge">Admin Portal</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">Overview</div>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html">
+              <svg viewBox="0 0 24 24"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="workshops.html">
+              <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+              <span>Workshops</span>
+              <span class="nav-counter">24</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="participants.html">
+              <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 3s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+              <span>Participants</span>
+              <span class="nav-counter">486</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="registrations.html">
+              <svg viewBox="0 0 24 24"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+              <span>Registrations</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="nav-section-title">Resources</div>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="equipment.html">
+              <svg viewBox="0 0 24 24"><path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/></svg>
+              <span>Equipment</span>
+              <span class="nav-counter">128</span>
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a href="rentals.html" aria-current="page">
+              <svg viewBox="0 0 24 24"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14zm-1-6h-3V8h-2v5H8l4 4 4-4z"/></svg>
+              <span>Equipment Rentals</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="requests.html">
+              <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z"/></svg>
+              <span>Requests</span>
+              <span class="nav-counter">12</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="nav-section-title">System</div>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="reports.html">
+              <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+              <span>Reports</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="settings.html">
+              <svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+              <span>Settings</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-user">
+        <div class="user-card">
+          <div class="user-avatar" aria-hidden="true">AD</div>
+          <div class="user-details">
+            <span class="user-name">Dr. Rajesh Kumar</span>
+            <span class="user-role">System Administrator</span>
+          </div>
+          <a href="login.html" class="user-logout" title="Sign out" aria-label="Sign out">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"/></svg>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="main-wrapper">
+      <header class="top-nav">
+        <div class="top-nav-left">
+          <label for="sidebar-toggle" class="sidebar-toggle-label" aria-label="Toggle navigation menu">
+            <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+          </label>
+          <div class="page-title-box">
+            <h1 class="page-title">Equipment Checkout &amp; Rentals</h1>
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <span class="breadcrumb-item"><a href="index.html">Home</a></span>
+              <span class="breadcrumb-item"><a href="equipment.html">Equipment</a></span>
+              <span class="breadcrumb-item active" aria-current="page">Rentals</span>
+            </nav>
+          </div>
+        </div>
+
+        <div class="top-nav-right">
+          <a href="equipment.html" class="btn btn-secondary btn-sm">
+            <svg viewBox="0 0 24 24"><path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4z"/></svg>
+            <span>View Inventory</span>
+          </a>
+          <a href="settings.html" class="top-user-pill">
+            <div class="top-user-avatar">RK</div>
+            <span class="top-user-name">Dr. Rajesh</span>
+            <span class="top-user-tag">Admin</span>
+          </a>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <div class="page-header">
+          <div class="page-header-title">
+            <h1>Equipment Rental Authorizations</h1>
+            <p>Approve workshop hardware reservations, verify return dates, and ensure equipment accountability.</p>
+          </div>
+          <div class="page-header-actions">
+            <a href="requests.html" class="btn btn-secondary">Submit Requisition</a>
+          </div>
+        </div>
+
+        <section class="toolbar-card" aria-label="Rental Filter Controls">
+          <form class="filter-form" action="rentals.html" method="get">
+            <div class="search-input-wrap">
+              <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+              <input type="search" name="rental_q" placeholder="Search by Rental ID, instructor, or item..." aria-label="Search rentals">
+            </div>
+
+            <div class="filter-group">
+              <label for="approval-status" class="filter-label">Approval Status:</label>
+              <select id="approval-status" name="approval_status">
+                <option value="all">All Statuses</option>
+                <option value="pending">Pending Approval</option>
+                <option value="approved">Approved / Active</option>
+                <option value="returned">Returned</option>
+                <option value="rejected">Rejected</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-secondary">Filter</button>
+            <a href="rentals.html" class="btn btn-secondary">Reset</a>
+          </form>
+        </section>
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h2 class="card-title">Hardware Custody &amp; Loan Records</h2>
+              <span class="card-subtitle">Showing active checkouts, pending faculty bookings, and overdue items</span>
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="table-striped">
+              <caption>Equipment Rental Transactions Table</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Rental ID</th>
+                  <th scope="col">Equipment Item</th>
+                  <th scope="col">Requested By</th>
+                  <th scope="col">Rental Date</th>
+                  <th scope="col">Expected Return</th>
+                  <th scope="col">Qty</th>
+                  <th scope="col">Approval Status</th>
+                  <th scope="col">Approval Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>RNT-5021</code></td>
+                  <td>
+                    <span class="table-main-text">Raspberry Pi 4 Model B Kits</span>
+                    <span class="table-sub-text">For Embedded IoT Workshop</span>
+                  </td>
+                  <td>Dr. Sarah Jenkins</td>
+                  <td><time datetime="2026-11-04">Nov 04, 2026</time></td>
+                  <td><time datetime="2026-11-06">Nov 06, 2026</time></td>
+                  <td><strong>15 units</strong></td>
+                  <td><span class="badge badge-pending">Pending Approval</span></td>
+                  <td>
+                    <div class="btn-group">
+                      <a href="#approve" class="btn btn-success btn-sm" title="Approve Request">Approve</a>
+                      <a href="#reject" class="btn btn-outline-danger btn-sm" title="Reject Request">Reject</a>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><code>RNT-5022</code></td>
+                  <td>
+                    <span class="table-main-text">Epson 4K Laser Projector Kit</span>
+                    <span class="table-sub-text">For Auditorium AI Presentation</span>
+                  </td>
+                  <td>Dr. Priya Sharma</td>
+                  <td><time datetime="2026-11-12">Nov 12, 2026</time></td>
+                  <td><time datetime="2026-11-12">Nov 12, 2026</time></td>
+                  <td><strong>1 unit</strong></td>
+                  <td><span class="badge badge-approved">Approved</span></td>
+                  <td>
+                    <div class="btn-group">
+                      <a href="#return" class="btn btn-secondary btn-sm">Mark Returned</a>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><code>RNT-5023</code></td>
+                  <td>
+                    <span class="table-main-text">Dell Latitude 5440 Laptops</span>
+                    <span class="table-sub-text">Temporary lab backup machines</span>
+                  </td>
+                  <td>Prof. Alan Vance</td>
+                  <td><time datetime="2026-11-08">Nov 08, 2026</time></td>
+                  <td><time datetime="2026-11-09">Nov 09, 2026</time></td>
+                  <td><strong>10 units</strong></td>
+                  <td><span class="badge badge-approved">Approved</span></td>
+                  <td>
+                    <div class="btn-group">
+                      <a href="#return" class="btn btn-secondary btn-sm">Mark Returned</a>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><code>RNT-5024</code></td>
+                  <td>
+                    <span class="table-main-text
+                                        <span class="table-main-text">Cisco Catalyst 24-Port Switch</span>
+                    <span class="table-sub-text">Cybersecurity live network attack lab</span>
+                  </td>
+                  <td>Michael Chang</td>
+                  <td><time datetime="2026-11-20">Nov 20, 2026</time></td>
+                  <td><time datetime="2026-11-21">Nov 21, 2026</time></td>
+                  <td><strong>2 units</strong></td>
+                  <td><span class="badge badge-pending">Pending Approval</span></td>
+                  <td>
+                    <div class="btn-group">
+                      <a href="#approve" class="btn btn-success btn-sm">Approve</a>
+                      <a href="#reject" class="btn btn-outline-danger btn-sm">Reject</a>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><code>RNT-5018</code></td>
+                  <td>
+                    <span class="table-main-text">Arduino Mega Sensor Suite</span>
+                    <span class="table-sub-text">Hardware prototyping seminar</span>
+                  </td>
+                  <td>Prof. Vikram Roy</td>
+                  <td><time datetime="2026-10-14">Oct 14, 2026</time></td>
+                  <td><time datetime="2026-10-15">Oct 15, 2026</time></td>
+                  <td><strong>12 units</strong></td>
+                  <td><span class="badge badge-completed">Returned &amp; Audited</span></td>
+                  <td><span class="table-sub-text">Closed</span></td>
+                </tr>
+
+                <tr>
+                  <td><code>RNT-5015</code></td>
+                  <td>
+                    <span class="table-main-text">High-Power VR Headsets (Oculus)</span>
+                    <span class="table-sub-text">Student club hackathon trial</span>
+                  </td>
+                  <td>Kavya Raman (Student Lead)</td>
+                  <td><time datetime="2026-10-08">Oct 08, 2026</time></td>
+                  <td><time datetime="2026-10-09">Oct 09, 2026</time></td>
+                  <td><strong>4 units</strong></td>
+                  <td><span class="badge badge-rejected">Rejected</span></td>
+                  <td><span class="table-sub-text">Faculty Co-Sign Missing</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="card-footer">
+            <span>Showing <strong>6</strong> rental requisitions (2 pending administrative review)</span>
+            <div class="btn-group">
+              <button type="button" class="btn btn-secondary btn-sm" disabled>Previous</button>
+              <button type="button" class="btn btn-secondary btn-sm">Next</button>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="app-footer">
+        <div>
+          <span>&copy; 2026 Workshop Management System. Department of Computer Science &amp; Engineering.</span>
+        </div>
+        <div class="footer-links">
+          <a href="reports.html">Analytics</a>
+          <a href="settings.html">Settings</a>
+          <a href="login.html">Sign Out</a>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

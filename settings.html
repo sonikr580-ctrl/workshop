@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="System Settings - Manage administrator profile, institution metadata, notification subscriptions, and dashboard appearance.">
+  <title>Settings - Workshop Management System</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle-input" aria-hidden="true">
+
+  <div class="app-container">
+    <aside class="sidebar" aria-label="Main Navigation">
+      <div class="sidebar-brand">
+        <div class="brand-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <div class="brand-info">
+          <span class="brand-title">WorkshopHub</span>
+          <span class="brand-badge">Admin Portal</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">Overview</div>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html">
+              <svg viewBox="0 0 24 24"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="workshops.html">
+              <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+              <span>Workshops</span>
+              <span class="nav-counter">24</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="participants.html">
+              <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 3s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+              <span>Participants</span>
+              <span class="nav-counter">486</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="registrations.html">
+              <svg viewBox="0 0 24 24"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+              <span>Registrations</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="nav-section-title">Resources</div>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="equipment.html">
+              <svg viewBox="0 0 24 24"><path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/></svg>
+              <span>Equipment</span>
+              <span class="nav-counter">128</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="rentals.html">
+              <svg viewBox="0 0 24 24"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14zm-1-6h-3V8h-2v5H8l4 4 4-4z"/></svg>
+              <span>Equipment Rentals</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="requests.html">
+              <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z"/></svg>
+              <span>Requests</span>
+              <span class="nav-counter">12</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="nav-section-title">System</div>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="reports.html">
+              <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+              <span>Reports</span>
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a href="settings.html" aria-current="page">
+              <svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+              <span>Settings</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-user">
+        <div class="user-card">
+          <div class="user-avatar" aria-hidden="true">AD</div>
+          <div class="user-details">
+            <span class="user-name">Dr. Rajesh Kumar</span>
+            <span class="user-role">System Administrator</span>
+          </div>
+          <a href="login.html" class="user-logout" title="Sign out" aria-label="Sign out">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"/></svg>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="main-wrapper">
+      <header class="top-nav">
+        <div class="top-nav-left">
+          <label for="sidebar-toggle" class="sidebar-toggle-label" aria-label="Toggle navigation menu">
+            <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+          </label>
+          <div class="page-title-box">
+            <h1 class="page-title">Configuration &amp; Settings</h1>
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <span class="breadcrumb-item"><a href="index.html">Home</a></span>
+              <span class="breadcrumb-item active" aria-current="page">Settings</span>
+            </nav>
+          </div>
+        </div>
+
+        <div class="top-nav-right">
+          <a href="settings.html" class="top-user-pill">
+            <div class="top-user-avatar">RK</div>
+            <span class="top-user-name">Dr. Rajesh</span>
+            <span class="top-user-tag">Admin</span>
+          </a>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <div class="page-header">
+          <div class="page-header-title">
+            <h1>System Settings &amp; Preferences</h1>
+            <p>Maintain your profile details, department credentials, communication preferences, and styling themes.</p>
+          </div>
+        </div>
+
+        <div class="settings-layout">
+          <aside class="card" style="height: fit-content;" aria-label="Settings navigation">
+            <nav class="settings-nav card-body" style="padding: var(--space-sm);">
+              <a href="#profile" class="settings-nav-item active">
+                <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                <span>Profile Settings</span>
+              </a>
+              <a href="#organization" class="settings-nav-item">
+                <svg viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
+                <span>Organization Info</span>
+              </a>
+              <a href="#notifications" class="settings-nav-item">
+                <svg viewBox="0 0 24 24"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg>
+                <span>Email &amp; Alerts</span>
+              </a>
+              <a href="#appearance" class="settings-nav-item">
+                <svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.28 19.57 10.59 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/></svg>
+                <span>Theme &amp; Appearance</span>
+              </a>
+            </nav>
+          </aside>
+
+          <div class="settings-content">
+            <form action="settings.html" method="get">
+              <fieldset id="profile">
+                <legend>
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                  Admin User Profile
+                </legend>
+
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label for="admin-name" class="label-required">Full Name</label>
+                    <input type="text" id="admin-name" name="admin_name" value="Dr. Rajesh Kumar" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="admin-email" class="label-required">Official Email</label>
+                    <input type="email" id="admin-email" name="admin_email" value="rajesh.kumar@college.edu" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="admin-phone">Contact Phone</label>
+                    <input type="tel" id="admin-phone" name="admin_phone" value="+91 98765 00112" pattern="[+0-9\s-]{10,15}">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="admin-role">System Role</label>
+                    <input type="text" id="admin-role" name="admin_role" value="Lead Faculty Coordinator (CSE)" readonly>
+                  </div>
+
+                  <div class="form-group col-span-2">
+                    <label for="admin-bio">Professional Bio</label>
+                    <textarea id="admin-bio" name="admin_bio" rows="3">Professor & Head of Department for Distributed Computing. Coordinator for IEEE Student Branch and technical workshops.</textarea>
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset id="organization">
+                <legend>
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
+                  Institution &amp; Department Information
+                </legend>
+
+                <div class="form-grid-2">
+                  <div class="form-group col-span-2">
+                    <label for="inst-name" class="label-required">Institution / College Name</label>
+                    <input type="text" id="inst-name" name="inst_name" value="National Institute of Technology &amp; Engineering" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="inst-campus">Campus Location</label>
+                    <input type="text" id="inst-campus" name="inst_campus" value="Main Campus, Academic Complex Block 4">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="inst-dept">Academic Department</label>
+                    <input type="text" id="inst-dept" name="inst_dept" value="Department of Computer Science &amp; Engineering">
+                  </div>
+
+                  <div class="form-group col-span-2">
+                    <label for="inst-address">Postal Address</label>
+                    <textarea id="inst-address" name="inst_address" rows="2">Sector 62, Knowledge Corridor, Tech City - 560100</textarea>
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset id="notifications">
+                <legend>
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg>
+                  Communication &amp; Alert Preferences
+                </legend>
+
+                <div class="checkbox-group">
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="alert_registration" checked>
+                    <span>Receive real-time email notification when a student registers for a workshop</span>
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="alert_equipment" checked>
+                    <span>Send overdue alerts for equipment checkouts not returned within 48 hours</span>
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="alert_request" checked>
+                    <span>Notify upon new faculty syllabus proposals or venue requests</span>
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="alert_digest">
+                    <span>Send weekly administrative summary digest every Monday morning at 08:00 AM</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <fieldset id="appearance">
+                <legend>
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.28 19.57 10.59 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/></svg>
+                  Dashboard Theme Palette
+                </legend>
+                <p class="field-hint">Select your preferred CSS visual color scheme:</p>
+
+                <div class="theme-options-grid">
+                  <div class="theme-card-option active">
+                    <div class="theme-color-preview preview-navy"></div>
+                    <span class="table-main-text">Midnight Navy</span>
+                    <span class="table-sub-text">Default SaaS</span>
+                  </div>
+
+                  <div class="theme-card-option">
+                    <div class="theme-color-preview preview-emerald"></div>
+                    <span class="table-main-text">Emerald Green</span>
+                    <span class="table-sub-text">Academic Calm</span>
+                  </div>
+
+                  <div class="theme-card-option">
+                    <div class="theme-color-preview preview-purple"></div>
+                    <span class="table-main-text">Royal Purple</span>
+                    <span class="table-sub-text">Creative Studio</span>
+                  </div>
+
+                  <div class="theme-card-option">
+                    <div class="theme-color-preview preview-slate"></div>
+                    <span class="table-main-text">Dark Slate</span>
+                    <span class="table-sub-text">High Contrast</span>
+                  </div>
+                </div>
+              </fieldset>
+
+              <div class="form-actions">
+                <button type="reset" class="btn btn-secondary">Discard Changes</button>
+                <button type="submit" class="btn btn-primary">Save Configuration</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+
+      <footer class="app-footer">
+        <div>
+          <span>&copy; 2026 Workshop Management System. Department of Computer Science &amp; Engineering.</span>
+        </div>
+        <div class="footer-links">
+          <a href="reports.html">Analytics</a>
+          <a href="settings.html">Settings</a>
+          <a href="login.html">Sign Out</a>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

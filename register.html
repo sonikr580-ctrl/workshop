@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Participant Registration - Create a new student or attendee profile for workshop enrollments and laboratory access.">
+  <title>Register - Workshop Management System</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="auth-page">
+  <main class="auth-container auth-large animate-fade-in" aria-labelledby="register-heading">
+    <div class="auth-header">
+      <div class="auth-logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      </div>
+      <h1 id="register-heading" class="auth-title">Participant Account Registration</h1>
+      <p class="auth-subtitle">Join technical workshops, access lab software repositories, and receive verified certificates.</p>
+    </div>
+
+    <div class="auth-disclaimer-card">
+      <strong>Academic Prototype Notice:</strong>
+      Demonstrating HTML5 Semantic Forms and client-side constraints. Submitting this form directs you to the login gateway.
+    </div>
+
+    <form class="auth-form" action="login.html" method="get">
+      <div class="form-grid-2">
+        <div class="form-group">
+          <label for="reg-fullname" class="label-required">Full Legal Name</label>
+          <input type="text" id="reg-fullname" name="fullname" placeholder="e.g. Aarav Patel" required minlength="3" maxlength="80">
+        </div>
+
+        <div class="form-group">
+          <label for="reg-email" class="label-required">Institutional Email</label>
+          <input type="email" id="reg-email" name="email" placeholder="e.g. aarav.patel@college.edu" required autocomplete="email">
+        </div>
+
+        <div class="form-group">
+          <label for="reg-phone" class="label-required">Contact Phone Number</label>
+          <input type="tel" id="reg-phone" name="phone" placeholder="+91 98765 43210" required pattern="[+0-9\s-]{10,15}">
+        </div>
+
+        <div class="form-group">
+          <label for="reg-dept" class="label-required">Department</label>
+          <select id="reg-dept" name="department" required>
+            <option value="" disabled selected>Choose your department...</option>
+            <option value="cse">Computer Science &amp; Engineering</option>
+            <option value="ece">Electronics &amp; Communication</option>
+            <option value="it">Information Technology</option>
+            <option value="ee">Electrical Engineering</option>
+            <option value="mech">Mechanical Engineering</option>
+            <option value="external">External / Industry Participant</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="reg-id" class="label-required">Student / Employee Roll ID</label>
+          <input type="text" id="reg-id" name="roll_id" placeholder="e.g. BT23CSE045" required pattern="[A-Za-z0-9]{6,15}">
+        </div>
+
+        <div class="form-group">
+          <label for="reg-workshop" class="label-required">Select Desired Workshop</label>
+          <select id="reg-workshop" name="workshop" required>
+            <option value="" disabled selected>Select workshop to enroll...</option>
+            <option value="w101">CS-W101: Introduction to Python</option>
+            <option value="w102">CS-W102: Web Development Bootcamp</option>
+            <option value="w103">CS-W103: Artificial Intelligence Fundamentals</option>
+            <option value="w105">CS-W105: Cybersecurity Essentials</option>
+            <option value="w107">CS-W107: Embedded IoT &amp; Sensor Networks</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="reg-pass" class="label-required">Create Password</label>
+          <input type="password" id="reg-pass" name="password" placeholder="At least 8 characters" required minlength="8" autocomplete="new-password">
+        </div>
+
+        <div class="form-group">
+          <label for="reg-confirm" class="label-required">Confirm Password</label>
+          <input type="password" id="reg-confirm" name="confirm_password" placeholder="Re-enter password" required minlength="8" autocomplete="new-password">
+        </div>
+      </div>
+
+      <div class="form-group" style="margin-top: 10px;">
+        <label class="checkbox-label">
+          <input type="checkbox" name="terms" required>
+          <span>I agree to the laboratory safety terms, code of academic conduct, and workshop attendance policies.</span>
+        </label>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 10px;">
+        <span>Complete Registration &rarr;</span>
+      </button>
+    </form>
+
+    <footer class="auth-footer">
+      <span>Already have a registered account?</span>
+      <a href="login.html" style="font-weight: 600; margin-left: 4px;">Sign In here &rarr;</a>
+    </footer>
+  </main>
+</body>
+</html>
